@@ -2,8 +2,12 @@
 Some code to interact with [[https://docs.hetzner.cloud/][Hetzner Cloud API]].
 
 ** Usage
-   *** Getting all server types
    
-   (defvar *client* (heclcl:make-client "insert apitoken here"))
-   (defvar *response* (heclcl:get-all-server-types *client*))
-   
+*** Getting all server types
+    
+#+BEGIN_SRC
+
+    (defvar *client* (heclcl:make-client "insert apitoken here"))
+    (defvar *response* (heclcl:get-all-server-types *client*))
+
+#+ÉND_SRC   
