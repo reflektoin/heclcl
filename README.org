@@ -11,3 +11,15 @@ Some code to interact with [[https://docs.hetzner.cloud/][Hetzner Cloud API]].
     (defvar *response* (heclcl:get-all-server-types *client*))
 
 #+ÉND_SRC   
+
+
+*** Create a server
+
+#+BEGIN_SRC lisp
+
+    (defvar *client* (heclcl:make-client "insert apitoken here"))
+    (defvar *response* (heclcl:do-server-order *client* "ubuntu-20.04" "my-server" "cx11" "cloud-config string"))
+#+ÉND_SRC
+
+I've found it helpful to store the cloud-config string to a file. From the file load the config as a string to a variable and
+then pass the variable to the do-server-order method.
